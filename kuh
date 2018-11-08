@@ -64,6 +64,11 @@ public class Kuh {
 		this.gewicht = gewicht;
 	}
 
+	public String toString() {
+		return "Name : " + this.name + "\nHauptfarbe : " + this.hauptfarbe + "\nFleckenfarbe : "+ this.fleckenfarbe
+				+ "\nMilchmenge : "	+ this.milchmenge;
+	}
+
 	public int laufen(double x) {
 
 		for (int i = 0; i <= x; i++) {
@@ -75,6 +80,9 @@ public class Kuh {
 	}
 
 	public int fressen(double x) {
+		
+		System.out.println("Kuh frisst");
+		System.out.println("_____________");
 
 		for (int i = 0; i <= x; i++) {
 			gewicht = (int) (gewicht + 0.5);
@@ -86,31 +94,31 @@ public class Kuh {
 
 	public int melken(int x) {
 		
-		if(!(milchmenge<0)){
+		System.out.println("Wird gemolken");
+		System.out.println("_____________");
 
-		for (int i = 0; i <= x; i++) {
-			milchmenge = (milchmenge - 3);
+		if (!(milchmenge <=0)) {
 
+			for (int i = 0; i <= x; i++) {
+				milchmenge = (milchmenge - 3);
+
+			}
 		}
 
-		return milchmenge;}
+		else if (milchmenge < 0) {
 
-		else if (milchmenge<0) {
+			System.out.println("Die Kuh ist leergemoken");
 			
-	System.out.println("Die Kuh ist leergemoken");
-	
-	
+
 		}
+		
+
 		return milchmenge;
 
-		public String toString() {
-			return "Name : " + this.name + "\nHauptfarbe"+ this.hauptfarbe
-					+ "\nFleckenfarbe"+this.fleckenfarbe + "\nFleckenfarbe"+this.milchmenge;
-		}
-	// laufen sollte das Gewicht verringern
-	// fressen sollte das Gewicht erhöhen
-	// Eine Methode für die Milchmenge - melken
-	// -- Milchmenge sollte nicht im Negativenbereich abfallen können
+	}
+}
 
-}}
-
+// laufen sollte das Gewicht verringern
+// fressen sollte das Gewicht erhöhen
+// Eine Methode für die Milchmenge - melken
+// -- Milchmenge sollte nicht im Negativenbereich abfallen können
