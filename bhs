@@ -1,0 +1,36 @@
+package hentges.bhs;
+
+public class Bauernhofsimulator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Kuh Linda = new Kuh("Linda", "grün", "gelb", 20, 300);
+		Linda.laufen(5);
+		System.out.println(Linda);
+		Linda.melken(3);
+		System.out.println(Linda);
+		Linda.melken(30);
+		System.out.println(Linda);
+		Linda.fressen(20);
+		System.out.println(Linda);
+		Kuh Milka = new Kuh("Milka", "Lila", "Weiss", 18, 165);
+		Milka.laufen(5);
+		System.out.println(Milka);
+		Milka.melken(6);
+		System.out.println(Milka);
+		Milka.melken(30);
+		System.out.println(Milka);
+		Milka.fressen(5.5);
+		System.out.println(Milka);
+		Kuh Helge = new Kuh();
+		Helge.laufen(5);
+		Helge.melken(6);
+		Helge.melken(30);
+		System.out.println(Helge);
+		Helge.fressen(5.5);
+		
+
+	}
+
+}
